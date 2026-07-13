@@ -28,8 +28,8 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 ## Simulation & stress-testing
 *Tools that test the **system the agent uses**.*
-- [stampede](https://github.com/AgentReliability/stampede) — generate realistic + adversarial agent populations and run them against your MCP server / API / protocol. `maintained`
-- [mockworld](https://github.com/AgentReliability/mockworld) — high-fidelity fake services (Stripe/Gmail/exchange) as instant MCP servers for safe agent testing. `maintained`
+- [stampede](https://github.com/swarmproof/stampede) — generate realistic + adversarial agent populations and run them against your MCP server / API / protocol. `maintained`
+- [mockworld](https://github.com/swarmproof/mockworld) — high-fidelity fake services (Stripe/Gmail/exchange) as instant MCP servers for safe agent testing. `maintained`
 
 ## Security
 *Answering "is this server/agent malicious or vulnerable?"*
@@ -38,21 +38,21 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 ## Checkpointing & recovery
 *Surviving crashes, retries, and replays without corruption.*
-- [exactly-once](https://github.com/AgentReliability/exactly-once) — idempotency middleware so agent side-effects (payments, emails, txs) fire once. `maintained`
+- [exactly-once](https://github.com/swarmproof/exactly-once) — idempotency middleware so agent side-effects (payments, emails, txs) fire once. `maintained`
 
 ## Cost & economics
 *Keeping agents from spending unbounded money.*
-- [costbomb](https://github.com/AgentReliability/costbomb) — denial-of-wallet fuzzing; finds inputs that blow up your bill and gates CI on spend. `maintained`
+- [costbomb](https://github.com/swarmproof/costbomb) — denial-of-wallet fuzzing; finds inputs that blow up your bill and gates CI on spend. `maintained`
 
 ## Benchmarks
 - _(seeding — PRs welcome)_
 
 ## Incidents & post-mortems
-- [agent-postmortems](https://github.com/AgentReliability/agent-postmortems) — structured public database of real agent failures + a reporting standard. `maintained`
+- [agent-postmortems](https://github.com/swarmproof/agent-postmortems) — structured public database of real agent failures + a reporting standard. `maintained`
 
 ## Standards
 *Quality and reliability tooling for the systems agents depend on.*
-- [mcp-probe](https://github.com/AgentReliability/mcp-probe) — quality suite for MCP servers (contract, legibility, cost, performance). `maintained`
+- [mcp-probe](https://github.com/swarmproof/mcp-probe) — quality suite for MCP servers (contract, legibility, cost, performance). `maintained`
 
 ---
 
@@ -60,7 +60,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 PRs welcome — see [`CONTRIBUTING.md`](./CONTRIBUTING.md). Quality bar: real, working, relevant. One line per entry: name, honest one-line description, link, and a tag. Refreshed monthly.
 
-*Part of the [Agent Reliability toolkit](https://github.com/AgentReliability).*
+*Part of the [Agent Reliability toolkit](https://github.com/swarmproof).*
 
 ## License
 

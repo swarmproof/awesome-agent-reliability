@@ -5,8 +5,8 @@ abstract: "The curated map of the agent-reliability field. Part of the Agent Rel
 authors:
   - family-names: Boudoukha
     given-names: Maroua
-repository-code: "https://github.com/AgentReliability/awesome-agent-reliability"
-url: "https://github.com/AgentReliability/awesome-agent-reliability"
+repository-code: "https://github.com/swarmproof/awesome-agent-reliability"
+url: "https://github.com/swarmproof/awesome-agent-reliability"
 license: Apache-2.0
 type: software
 keywords:
