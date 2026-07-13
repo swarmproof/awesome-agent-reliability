@@ -60,7 +60,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 PRs welcome — see [`CONTRIBUTING.md`](./CONTRIBUTING.md). Quality bar: real, working, relevant. One line per entry: name, honest one-line description, link, and a tag. Refreshed monthly.
 
-*Part of the [Agent Reliability toolkit](https://github.com/swarmproof).*
+*Part of the [Swarm Proof toolkit](https://github.com/swarmproof).*
 
 ## License
 
