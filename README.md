@@ -161,6 +161,9 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 *Quality and reliability tooling for the systems agents depend on.*
 
+- [MCP Inspector](https://github.com/modelcontextprotocol/inspector) - official visual + CLI tester/debugger for MCP servers; CLI mode runs protocol-compliance checks in CI. `maintained`.
+- [ToolHive](https://github.com/stacklok/toolhive) - runs and secures MCP servers: container isolation, OIDC/OAuth gateway proxy, access policy, audit logs; local or K8s. `maintained`.
+- [Official MCP Registry](https://github.com/modelcontextprotocol/registry) - canonical open metadata registry for MCP servers (provenance, discovery); ~9,600 servers, in preview. `maintained`.
 - [mcp-probe](https://github.com/swarmproof/mcp-probe) - quality suite for MCP servers (contract, legibility, cost, performance). `maintained`.
 
 ## Contributing
