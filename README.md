@@ -148,6 +148,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 *The specs — protocol, security top-10s, and telemetry conventions.*
 
 - [Model Context Protocol — Specification](https://modelcontextprotocol.io/specification) - the protocol nearly every entry here assumes (link tracks the latest revision). `maintained`.
+- [Agent2Agent (A2A) Protocol](https://a2a-protocol.org) - Linux Foundation spec for agent-to-agent discovery, delegation, and messaging; signed Agent Cards. Earlier in real deployment than MCP. `research`.
 - [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/) - first dedicated Top-10 for MCP (token mismanagement, scope creep, tool poisoning, supply chain); still draft/beta. `research`.
 - [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) - model-layer risks (prompt injection, data poisoning); the de-facto LLM-risk checklist scanners map to. `research`.
 - [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) - autonomous-agent-behavior risks (ASI01–ASI10), finalized Dec 2025. `research`.
