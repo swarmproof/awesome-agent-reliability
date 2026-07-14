@@ -93,8 +93,11 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 - [LangGraph](https://github.com/langchain-ai/langgraph) - agent-native checkpointing: saves graph state per superstep, threads, human-in-the-loop pauses; protects against application-level failure. `maintained`.
 - [Temporal](https://github.com/temporalio/temporal) - durable workflow engine; protects against infrastructure-level failure (crashes, partitions, preemption). OSS core + Temporal Cloud. `maintained`.
-- [Restate](https://github.com/restatedev/restate) - journal-based durability; `ctx.run` durable steps, built-in KV state, durable timers, idempotency keys, awakeables. Lighter than Temporal. `maintained`.
+- [Inngest](https://github.com/inngest/inngest) - event-driven durable step functions with built-in flow control (concurrency, throttling, rate limits). SDKs Apache-2.0; server SSPL. `maintained`.
+- [Cloudflare Agents SDK](https://github.com/cloudflare/agents) - per-agent durable state via Durable Objects; MIT SDK, but runs only on Cloudflare's platform. `maintained`.
+- [Vercel Workflow DevKit](https://github.com/vercel/workflow) - TypeScript SDK for durable, crash-safe agents with suspend/resume state; Apache-2.0, runs on any Node host. `maintained`.
 - [DBOS](https://github.com/dbos-inc/dbos-transact-py) - durable execution backed by PostgreSQL; inherently durable without explicit checkpoint instrumentation. `maintained`.
+- [Restate](https://github.com/restatedev/restate) - journal-based durability; `ctx.run` durable steps, built-in KV state, durable timers, idempotency keys, awakeables. Lighter than Temporal. `maintained`.
 - [exactly-once](https://github.com/swarmproof/exactly-once) - focused idempotency middleware so agent side-effects (payments, emails, txs) fire once. Narrower than the workflow engines above — a complementary idempotency layer, not a full durable-execution runtime. `maintained`.
 
 ## Cost & economics
