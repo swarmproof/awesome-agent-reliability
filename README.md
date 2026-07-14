@@ -73,7 +73,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 #### Red-teaming & runtime guardrails
 
 - [garak](https://github.com/NVIDIA/garak) - NVIDIA's LLM vulnerability scanner; 37+ probe modules (encoding attacks, GCG suffixes, package hallucination, prompt injection). `maintained`.
-- [PyRIT](https://github.com/Azure/PyRIT) - Microsoft AI Red Team toolkit; multi-turn orchestrated attacks (Crescendo, TAP, Skeleton Key), multimodal. `maintained`.
+- [PyRIT](https://github.com/microsoft/PyRIT) - Microsoft AI Red Team toolkit; multi-turn orchestrated attacks (Crescendo, TAP, Skeleton Key), multimodal *(moved from the archived Azure/PyRIT)*. `maintained`.
 - [promptfoo](https://github.com/promptfoo/promptfoo) - YAML-defined red-team + eval, CI/CD-native, OWASP mapping *(acquired by OpenAI, still MIT-licensed)*. `maintained`.
 - [Invariant Guardrails](https://github.com/invariantlabs-ai/invariant) - rule-based runtime guardrail/proxy layer between your app and MCP/LLM providers. `maintained`.
 
