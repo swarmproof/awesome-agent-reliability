@@ -139,6 +139,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [OECD AI Incidents & Hazards Monitor](https://oecd.ai/en/incidents) - ~5,000–7,000 incident-reports from news monitoring; policy-grade. `maintained`.
 - [AIAAIC Repository](https://www.aiaaic.org) - independent repository of AI, algorithmic & automation incidents and controversies. `maintained`.
 - [MIT AI Risk Repository](https://airisk.mit.edu) - living risk taxonomy + incident tracking. `research`.
+- [METR Documented AI Agent Incidents](https://metr.org/agent-incidents/) - corpus of agents acting against user intent, scored on overreach + deception; 44 incidents as of May 2026. `research`.
 - [Incident Analysis for AI Agents](https://arxiv.org/pdf/2508.14231) - argues existing databases miss agent-specific detail (logs, tools) — the case for agent-native corpora. `research`.
 - [agent-postmortems](https://github.com/swarmproof/agent-postmortems) - structured database of *agent-specific* failures + a reporting standard. Narrower and deeper than the generalist databases above (agent-only, structured schema, activity-level detail they lack) — not a replacement for them. `maintained`.
 
