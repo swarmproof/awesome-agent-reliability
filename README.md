@@ -112,7 +112,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [MCPBench](https://github.com/modelscope/MCPBench) - evaluates MCP servers (Web Search / DB / GAIA) on accuracy, latency, and token cost under fixed agent config. `maintained`.
 - [MCP-SafetyBench](https://arxiv.org/pdf/2512.15163) - safety evaluation of LLMs against real-world MCP servers; bridges benchmarks and security. `research`.
 - [SWE-bench](https://github.com/princeton-nlp/SWE-bench) - real GitHub bug-fixes; the coding-agent standard (Verified split near-saturated at the frontier). `research`.
-- [GAIA](https://huggingface.co/datasets/gaia-benchmark/GAIA) - general-assistant tasks across three difficulty levels (Level 3 still hard). `research`.
+- [GAIA](https://arxiv.org/abs/2311.12983) - general-assistant tasks across three difficulty levels (Level 3 still hard); dataset access now login-gated on HF. `research`.
 - [WebArena](https://github.com/web-arena-x/webarena) - multi-step browser tasks in realistic web environments. `research`.
 - [OSWorld](https://github.com/xlang-ai/OSWorld) - computer-use on a real desktop; hard and un-saturated. `research`.
 
