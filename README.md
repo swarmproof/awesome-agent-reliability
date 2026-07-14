@@ -109,7 +109,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [METR HCAST / Time Horizons](https://metr.org) - the longest task an agent finishes 50% of the time — a distinctive reliability-over-time framing. `research`.
 - [LiveMCP-101](https://arxiv.org/abs/2508.15760) - 101 real queries needing coordinated multi-MCP-tool use; frontier models score <60%; identifies 7 failure modes. `research`.
 - [LiveMCPBench](https://icip-cas.github.io/LiveMCPBench/) - navigating a large MCP toolset; note: tasks are relatively simple (~2.7 tool calls avg). `research`.
-- [MCPBench](https://github.com/modelscope/MCPBench) - evaluates MCP servers (Web Search / DB / GAIA) on accuracy, latency, and token cost under fixed agent config. `maintained`.
+- [MCPBench](https://github.com/modelscope/MCPBench) - evaluates MCP servers (Web Search / DB / GAIA) on accuracy, latency, and token cost; harness dormant since Apr 2025. `research`.
 - [MCP-SafetyBench](https://arxiv.org/pdf/2512.15163) - safety evaluation of LLMs against real-world MCP servers; bridges benchmarks and security. `research`.
 - [SWE-bench](https://github.com/princeton-nlp/SWE-bench) - real GitHub bug-fixes; the coding-agent standard (Verified split saturated at the frontier). `research`.
 - [GAIA](https://arxiv.org/abs/2311.12983) - general-assistant tasks across three difficulty levels (Level 3 still hard); dataset access now login-gated on HF. `research`.
