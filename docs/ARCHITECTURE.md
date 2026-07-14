@@ -53,22 +53,24 @@ Ten sections. Order runs knowledge → practice, agent → substrate, so a newco
 **Grammar (one line, no exceptions):**
 
 ```
-- [<name>](<canonical-url>) — <honest one-line description>. `<tag>`
+- [<name>](<canonical-url>) - <honest one-line description>. `<tag>`.
 ```
 
 **Rules**
 - **Name** = the project/paper/spec's own name, linked to its canonical home (repo, arXiv abstract page, or official site). No vanity renaming.
 - **Description** = one sentence, present tense, ≤ ~140 chars. States *what it is* and, where material, *its boundary* ("~2.7 tool calls avg — relatively simple"; "narrower than a full workflow engine"). No superlatives, no marketing.
-- **Tag** = exactly one, from the closed set (§4), backtick-formatted, at the end of the line.
-- **Em dash** (`—`) separates link from description; **period** ends the description; the tag follows the period.
+- **Tag** = exactly one, from the closed set (§4), backtick-formatted, at the end of the line, followed by a terminal period.
+- **Hyphen** (` - `) separates link from description; **period** ends the description; the tag follows the period. (Originally an em dash — amended for awesome-lint conformance, see ADR-007. Em dashes remain fine *inside* descriptions.)
 - **Inline provenance notes** allowed in parentheses where honesty requires it: `(formerly mcp-scan; now Snyk Agent Scan)`, `(acquired by OpenAI, still MIT)`.
 
-**Optional secondary link** (papers with code, or a paper + dataset) is appended: `· code: <url>` / `· data: <url>`.
+**Optional secondary link** (papers with code, or a paper + dataset) is linked inline in the description (e.g., "Ships a [dataset](url) and [code](url)").
 
 **Example (real, from the survey):**
 ```
-- [τ-bench](https://github.com/sierra-research/tau-bench) — LLM user-simulator + tool APIs + policy docs; introduced `pass^k` (consistency across repeats). `research`
+- [τ-bench](https://github.com/sierra-research/tau-bench) - LLM user-simulator + tool APIs + policy docs; introduced `pass^k` (consistency across repeats). `research`.
 ```
+
+**Enforcement:** `scripts/format-lint.mjs` (run via `npm run lint`) asserts this grammar, the closed tag set, TOC↔section sync, and duplicate-URL detection with an ADR-003 cross-list allowlist. Golden/known-bad fixtures live in `tests/fixtures/`.
 
 ---
 
@@ -124,7 +126,7 @@ Merge → next monthly refresh verifies liveness
 ```
 
 **PR template** (`.github/PULL_REQUEST_TEMPLATE.md`) encodes a contributor self-check:
-- [ ] Entry follows the one-line schema (`[name](url) — desc. \`tag\``).
+- [ ] Entry follows the one-line schema (`[name](url) - desc. \`tag\`.`).
 - [ ] URL is canonical, first-party, and loads without login.
 - [ ] Exactly one tag, correct per the rubric.
 - [ ] Not a listicle/aggregator/marketing page.
@@ -180,3 +182,6 @@ From the YAML: a static site (e.g., zero-backend SSG) with **filter by section, 
 
 ### ADR-006 — Own tools ranked honestly, in-section, same tags
 **Decision:** Swarm Proof tools obey the identical schema, tags, and ordering rules; where a competitor is stronger, it is listed above the own tool. **Why:** the honesty is the entire product (PRD NFR-1); a self-serving list is worthless. **Consequence:** this is enforced in review and is grounds for reverting a merge.
+
+### ADR-007 — Entry grammar amended for awesome-lint conformance
+**Decision:** the link↔description separator is a plain hyphen (` - `), the trailing tag is followed by a terminal period, and the README carries no `## License` section (the LICENSE file is authoritative). **Why:** `awesome-lint` — the gate `sindresorhus/awesome` applies to submissions (DELIVERY-PLAN M1.1, TEST-PLAN scenario I, PRD M7) — rejects em/en-dash separators, list items not ending in punctuation, and a License section when a LICENSE file exists. The original §3 grammar could never pass the meta-list's own linter; conformance wins because meta-list acceptance is a primary success metric (PRD M1). **Also:** awesome-lint's `double-link` rule is disabled file-wide in the README (HTML comment at top) because ADR-003 cross-listings *require* duplicate canonical URLs; accidental duplicates are still caught by `scripts/format-lint.mjs` via an explicit cross-list allowlist. **Consequence:** §3 grammar, the PR template, CONTRIBUTING, and format-lint all encode the amended grammar; em dashes remain legal inside descriptions.
