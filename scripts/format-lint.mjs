@@ -27,6 +27,7 @@ const NON_CONTENT_SECTIONS = new Set(['Contents', 'Contributing', 'License']);
 const CROSS_LIST = [
   'https://github.com/sierra-research/tau-bench',
   'https://github.com/sierra-research/tau2-bench',
+  'https://github.com/promptfoo/promptfoo', // Evaluation + Security
 ];
 
 // Entry grammar. Name may contain any chars except `]`; URL must be http(s);
