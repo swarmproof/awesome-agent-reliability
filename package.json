@@ -1,0 +1,21 @@
+{
+  "name": "awesome-agent-reliability",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curated map of the agent-reliability field — lint tooling only, the list itself is README.md",
+  "type": "module",
+  "scripts": {
+    "lint": "npm run lint:format && npm run lint:awesome",
+    "lint:format": "node scripts/format-lint.mjs README.md",
+    "lint:awesome": "awesome-lint README.md",
+    "test": "node scripts/format-lint.mjs --self-test"
+  },
+  "devDependencies": {
+    "awesome-lint": "^1.2.0"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarmproof/awesome-agent-reliability.git"
+  }
+}
