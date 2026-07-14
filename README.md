@@ -46,13 +46,16 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 *Tools that **score** an agent's outputs and trajectory. (Eval scores a run; [Simulation](#simulation--stress-testing) generates the runs.)*
 
-- [agentevals](https://github.com/langchain-ai/agentevals) - open evaluators for agent trajectories and outputs; trajectory match (strict/unordered/subset/superset) + LLM-as-judge. `maintained`.
+- [Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai) - UK AI Security Institute's eval framework: agent scaffolds, tool use, multi-turn, model-graded scoring — a full harness, not just metrics. `maintained`.
 - [DeepEval](https://github.com/confident-ai/deepeval) - "pytest for LLMs"; 30+ metrics incl. tool-call accuracy and task completion (OSS core; Confident AI is the paid platform). `maintained`.
+- [Opik](https://github.com/comet-ml/opik) - eval + tracing for agentic workflows; LLM-as-judge metrics, self-hostable (Comet is the paid cloud). Overlaps Phoenix. `maintained`.
+- [Arize Phoenix](https://github.com/Arize-ai/phoenix) - self-hostable observability + eval on OpenTelemetry; 50+ evaluators over the full agent reasoning loop (ELv2 source-available). `maintained`.
 - [Ragas](https://github.com/vibrantlabsai/ragas) - RAG-eval standard extended to agents (Agent Goal Accuracy, Tool Call Accuracy) *(formerly explodinggradients; now Vibrant Labs, OSS core retained)*. `maintained`.
-- [Arize Phoenix](https://github.com/Arize-ai/phoenix) - self-hostable observability + eval on OpenTelemetry; 50+ evaluators over the full agent reasoning loop. `maintained`.
+- [promptfoo](https://github.com/promptfoo/promptfoo) - YAML/CLI eval + red-team gate teams wire into CI; the common PR-time eval harness. Also in [Security](#security). `maintained`.
+- [agentevals](https://github.com/langchain-ai/agentevals) - open evaluators for agent trajectories; trajectory match (strict/unordered/subset/superset) + LLM-as-judge. LangGraph-ecosystem helper. `maintained`.
 - [LangWatch](https://github.com/langwatch/langwatch) - OSS-core eval + monitoring with UI-driven eval building for non-engineers (commercial cloud tier). `maintained`.
-- [LangSmith](https://www.langchain.com/langsmith) - best-in-class framework-native trajectory eval for LangChain/LangGraph users; closed platform. `commercial`.
-- [Braintrust](https://www.braintrust.dev) - eval + prompt-iteration platform, widely adopted. `commercial`.
+- [LangSmith](https://www.langchain.com/langsmith) - framework-native trajectory eval for LangChain/LangGraph users; closed platform. `commercial`.
+- [Braintrust](https://www.braintrust.dev) - eval + prompt-iteration platform; the common paid choice once teams outgrow local testing. `commercial`.
 
 ## Simulation & stress-testing
 
