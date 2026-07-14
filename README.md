@@ -81,6 +81,10 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [promptfoo](https://github.com/promptfoo/promptfoo) - YAML-defined red-team + eval, CI/CD-native, OWASP mapping *(acquired by OpenAI, still MIT-licensed)*. Also in [Evaluation](#evaluation). `maintained`.
 - [garak](https://github.com/NVIDIA/garak) - NVIDIA's LLM vulnerability scanner; 37+ probe modules (encoding attacks, GCG suffixes, package hallucination, prompt injection). `maintained`.
 - [PyRIT](https://github.com/microsoft/PyRIT) - Microsoft AI Red Team toolkit; multi-turn orchestrated attacks (Crescendo, TAP, Skeleton Key), multimodal *(moved from the archived Azure/PyRIT)*. `maintained`.
+- [ContextForge MCP Gateway](https://github.com/IBM/mcp-context-forge) - IBM gateway/proxy in front of MCP/A2A/REST; centralized auth + plugin-based guardrails (PII, policy), FIPS/STIG hardening. `maintained`.
+- [LlamaFirewall](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall) - Meta's agent guardrail: PromptGuard 2 injection filter, AlignmentCheck reasoning auditor, CodeShield; Llama license. `maintained`.
+- [NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) - NVIDIA's programmable rails (Colang) for safety, topic, and jailbreak checks; dialogue-centric more than agent-trajectory. `maintained`.
+- [Guardrails AI](https://github.com/guardrails-ai/guardrails) - input/output validation with a hub of reusable validators (PII, toxicity, structure); a validation layer, not red-teaming. `maintained`.
 
 ## Checkpointing & recovery
 
