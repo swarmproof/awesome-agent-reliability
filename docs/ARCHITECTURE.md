@@ -63,7 +63,7 @@ Ten sections. Order runs knowledge → practice, agent → substrate, so a newco
 - **Hyphen** (` - `) separates link from description; **period** ends the description; the tag follows the period. (Originally an em dash — amended for awesome-lint conformance, see ADR-007. Em dashes remain fine *inside* descriptions.)
 - **Inline provenance notes** allowed in parentheses where honesty requires it: `(formerly mcp-scan; now Snyk Agent Scan)`, `(acquired by OpenAI, still MIT)`.
 
-**Optional secondary link** (papers with code, or a paper + dataset) is linked inline in the description (e.g., "Ships a [dataset](url) and [code](url)").
+**Optional secondary link** (papers with code, or a paper + dataset) is linked inline in the description (e.g., ``Ships a [dataset](url) and [code](url)``).
 
 **Example (real, from the survey):**
 ```
