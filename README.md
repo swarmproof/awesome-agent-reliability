@@ -64,6 +64,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [IntellAgent](https://github.com/plurai-ai/intellagent) - builds synthetic test suites from policy graphs; simulates thousands of realistic edge-case conversations to surface hidden failures. `maintained`.
 - [τ-bench](https://github.com/sierra-research/tau-bench) - LLM user-simulator + tool APIs + policy docs; introduced `pass^k` (consistency across repeats). Also a [benchmark](#benchmarks). `research`.
 - [τ²-bench](https://github.com/sierra-research/tau2-bench) - dual-control successor with voice + knowledge-retrieval domains. Also a [benchmark](#benchmarks). `research`.
+- [Strands Evals](https://github.com/strands-agents/evals) - agent eval SDK with adaptive simulated users (ActorSimulator) + deterministic fault injection (ChaosPlugin: timeouts, corruption). Early. `maintained`.
 - [stampede](https://github.com/swarmproof/stampede) - generates realistic + adversarial agent *populations* against your MCP server / API / protocol (tests agents→system, vs τ-bench's users→agent). Earlier-stage than τ-bench; complementary. `maintained`.
 - [mockworld](https://github.com/swarmproof/mockworld) - high-fidelity fake services (Stripe/Gmail/exchange) as instant MCP servers for safe agent testing. `maintained`.
 
