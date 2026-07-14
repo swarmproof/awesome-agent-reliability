@@ -203,3 +203,69 @@ A recurring **CUT** class this cycle: the field is drowning in "Top N AI Agent E
 - https://github.com/princeton-nlp/SWE-bench · https://huggingface.co/datasets/gaia-benchmark/GAIA · https://github.com/web-arena-x/webarena · https://github.com/xlang-ai/OSWorld · https://arxiv.org/abs/2508.15760 · https://github.com/modelscope/MCPBench · https://arxiv.org/pdf/2512.15163
 - https://incidentdatabase.ai · https://oecd.ai/en/incidents · https://www.aiaaic.org · https://airisk.mit.edu · https://arxiv.org/pdf/2508.14231
 - https://modelcontextprotocol.io/specification/2025-11-25 · https://owasp.org/www-project-mcp-top-10/ · https://genai.owasp.org · https://www.nist.gov/itl/ai-risk-management-framework · https://github.com/open-telemetry/semantic-conventions
+
+---
+
+# 2026-07 Refresh Addendum — adoption-weighted verification pass
+
+> Method: five parallel research passes (one per section cluster), July 14 2026. Every existing entry re-verified live (HTTP status; GitHub API `pushed_at`/`archived`; PyPI/npm downloads where meaningful). Curation re-weighted toward **practitioner adoption** — what agent engineers demonstrably run in production — per maintainer direction. Every URL added below was independently re-fetched (26/26 OK) before merging.
+
+## Corrections to existing entries (defects found)
+
+| Entry | Defect | Fix applied |
+|---|---|---|
+| PyRIT | README pointed at `Azure/PyRIT` — **archived 2026-03-25**; live repo is `microsoft/PyRIT` (357 merged PRs/60d) | URL updated + provenance note |
+| Ragas | Org renamed: `explodinggradients` → `vibrantlabsai` (Vibrant Labs; OSS core retained, now their flagship commercial product) | URL updated + provenance note |
+| GAIA | HF dataset page now **login-gated** — fails criterion 2 (reachable) | Re-linked to public arXiv page (2311.12983) + gating noted |
+| MAST | Line said "200+ traces"; paper says **1,600+** | Corrected |
+| MCPBench | Harness dormant since 2025-04 (~14 months) — `maintained` no longer true (§4 staleness rule) | Re-tagged `research` + dormancy noted |
+| SWE-bench | Verified split now saturated (95.5% top score, July 2026) | "near-saturated" → "saturated" |
+| OTel GenAI conventions | Content moved to `semantic-conventions-genai` repo (old URL is a silent redirect stub CI can't catch) | URL updated; "memory spans" claim softened (unverified) |
+| OWASP Agentic Top 10 | Entry linked generic org root (duplicate URL with LLM Top 10 entry) | Deep-linked to the canonical resource page |
+| OWASP MCP Top 10 | Still draft/beta v0.1 (Phase 3 pilot) — line didn't say so | Limitation added |
+| MCP spec | Pinned revision link (2025-11-25) goes stale; 2026-07-28 revision finalizes in ~2 weeks | Re-pointed to revision-agnostic `/specification` root |
+
+## CUT at this refresh
+
+| Entry | Reason |
+|---|---|
+| **Invariant Guardrails** (was listed, Security) | OSS repo frozen since 2026-01 (0 PRs/issues in 6 months); development moved into Snyk's commercial platform. `maintained` tag was no longer a true promise (§4 staleness). Clearest famous-vs-used case found. |
+
+## ADDED (all passed the five-criteria bar; adoption evidence retained)
+
+**Foundations:** Anthropic *How We Built Our Multi-Agent Research System* (production failure-mode post-mortem; very high citation) · Cognition *Don't Build Multi-Agents* (the canonical architecture counterpoint) · *Towards a Science of AI Agent Reliability* (ICML 2026; 12 reliability metrics).
+**Evaluation:** Inspect AI (UK AISI; **9.3M PyPI dl/mo — highest of any dedicated eval tool checked**) · Opik (3.6M dl/mo; overlap with Phoenix noted in-line) · promptfoo cross-listed from Security (npm 1.57M dl/mo; the common CI eval gate). Section reordered by real adoption (agentevals, 307k dl/mo, moved down from first).
+**Simulation:** Strands Evals (only entry with deterministic fault injection — ChaosPlugin; early, 159★, noted).
+**Security:** ContextForge MCP Gateway (IBM; 320 merged PRs/60d) · LlamaFirewall (Meta; agent-specific AlignmentCheck; judged on production use + PyPI, not repo velocity — public repo is a periodic dump) · NeMo Guardrails (134 merged PRs/60d; moved repo `NVIDIA-NeMo/Guardrails`) · Guardrails AI (widely deployed validation layer; velocity cooling — ranked last of the four).
+**Checkpointing:** Inngest (4.85M npm + 1.15M PyPI dl/mo; server SSPL noted) · Cloudflare Agents SDK (3.7M npm dl/mo; platform lock noted) · Vercel Workflow DevKit (2.2M npm dl/mo; Apache-2.0, portable). Section reordered by adoption; Restate (238k PyPI) ranked below DBOS.
+**Cost:** LiteLLM (~20M+ PyPI dl/day; hard fail-closed budget caps — fills the enforcement gap). Langfuse moved above Helicone (note: Helicone's tiny PyPI count is a measurement artifact — it deploys as a proxy URL swap).
+**Benchmarks:** CAR-bench (ACL 2026; pass^k lineage + limit-awareness; early adoption noted).
+**Incidents:** METR Documented AI Agent Incidents (44 incidents; distinct misalignment/deception scoring).
+**Standards:** A2A Protocol v1.0 (Linux Foundation; 24.8k★; hype-vs-deployment gap noted in-line).
+**Tooling:** MCP Inspector (10.4k★; de-facto "Postman for MCP") · ToolHive (Stacklok; production MCP ops) · Official MCP Registry (~9,600 servers; preview noted). Honesty ordering: all three above mcp-probe (0★, own tool).
+
+## HOLD (plausible, parked with reasons — re-judge next refresh)
+
+- **Hatchet** — adoption ≈ DBOS (1.23M PyPI + 737k npm) but overlaps DBOS (Postgres durability) and Temporal (orchestration); queue-first niche didn't clear non-redundancy. Closest miss this cycle.
+- **Portkey Gateway** — real (12.4k★) but an order of magnitude below LiteLLM on the same budget-cap axis.
+- **CaMeL (Google DeepMind)** — influential injection-defense *design* (354★, repo quiet since 2025-06); cited everywhere, deployed nowhere. Candidate as `research` design pattern only.
+- **Galileo Agent Control** — Apache-2.0 runtime guardrails spun out of Galileo (275★); not independently verified by the security pass. Vet next cycle.
+- **Docker MCP Gateway** — real OSS CLI but the managed feature is invite-only; gated availability weakens "runnable."
+- **Microsoft MCP Gateway** — narrower than ToolHive (K8s session routing); add only if the ops shelf broadens.
+- **τ³-bench** — successor release spotted; not yet independently verified.
+- Foundations papers below the citation bar this cycle: *Beyond pass@1* (2603.29231), *Safety-benchmark consistency survey* (2605.16282), *JourneyBench* (2601.00596), *When Errors Become Narratives* (2606.14589), *On the Reliability of Computer Use Agents* (2604.17849), *HORIZON / Long-Horizon Task Mirage* (2604.11978), *SWE Atlas* (2605.08366).
+
+## CUT on the bar (documented so they aren't re-surveyed)
+
+- **Galileo (Evaluation, was HOLD)** — commercial cap binding (LangSmith + Braintrust fill the slots); platform is a category look-alike; its distinct artifact is the OSS Agent Control (see HOLD).
+- **mcp-audit / APIsec (Security, was HOLD)** — real and technically distinct (AI-BOM, client-side config scan) but 0 PRs/issues in 60 days, last push 2026-05-12: announced, not adopted.
+- **CSA agentic best-practices (Standards, was HOLD)** — no discrete ratified spec with a stable URL (program + blog notes); redundant with the listed AICM.
+- **Inngest/Hatchet as a pair-HOLD** — resolved: Inngest ADDED, Hatchet HELD (above).
+- **Weave** (970k dl/mo; redundant with Phoenix/Opik lane, no distinct reliability capability) · **MLflow GenAI eval** (platform feature, too broad) · **OpenAI Evals** (benchmark registry, slowing; not a trajectory evaluator) · **LiteLLM-as-evaluator** (it's a gateway; listed under Cost instead) · **Golem** (18 PyPI dl/mo — marketing-strong, usage-absent; BSL) · **Resonate** (2.2k dl/mo; redundant with Restate) · **OpenRouter spend caps** (account feature, not a deployable tool) · **Rebuff, LLM Guard** (archived; ProtectAI absorbed into Palo Alto) · **Lasso mcp-gateway** (dormant since Jan 2026) · **mcpo** (plain proxy, no guardrails) · **Lakera Guard, Prompt Security** (commercial marketing pages; cap + redundancy) · **ARE Incident Database** (vendor-run with disclosed COI — entries classified by whether the vendor's product stops them; fails neutrality without a caveat the entry can't carry) · **ISO/IEC 42001 agent guidance** (paywalled — fails reachable) · **EU AI Act GPAI Code** (model-scoped, not agent-reliability) · **NCCoE agent-identity paper** (draft, no ratified spec) · **individual Replit/PocketOS incident news articles** (news coverage, not structured primary sources; the structured records live in AIID) · **h5i-dev/awesome-ai-agent-incidents & similar** (non-canonical aggregators).
+
+## Notes for next refresh (2026-08)
+
+- MCP spec revision 2026-07-28 should have finalized — confirm the `/specification` root resolves to it.
+- Re-check: promptfoo "acquired by OpenAI" provenance (nothing contradicts it; not freshly corroborated this cycle) · Hatchet adoption trend · Galileo Agent Control (Security) · τ³-bench.
+- Competing/adjacent curated list: `yzhao062/awesome-auditable-ai` — review for differentiation and candidate-mining.
+- nsa.gov / nist.gov / media.defense.gov / ssrn.com 403 automated checkers (bot policy, not rot) — excluded in `lychee.toml`; verify in a browser each refresh.
