@@ -106,12 +106,13 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 #### Observability of spend
 
+- [Langfuse](https://github.com/langfuse/langfuse) - span-tracing observability; strong for multi-step agent debugging; self-hostable or managed. The most widely adopted of the two. `maintained`.
 - [Helicone](https://github.com/Helicone/helicone) - proxy-layer observability; one-line integration, automatic cost tracking, zero markup. Best for simpler chains / lower spend. `maintained`.
-- [Langfuse](https://github.com/langfuse/langfuse) - span-tracing observability; strong for multi-step agent debugging; self-hostable or managed. `maintained`.
 
 #### Proactive cost defense
 
-- [costbomb](https://github.com/swarmproof/costbomb) - denial-of-wallet *fuzzing*: finds inputs that blow up your bill and gates CI on spend. Offensive/proactive, not observability — no direct competitor found. `maintained`.
+- [LiteLLM](https://github.com/BerriAI/litellm) - the de-facto LLM gateway; hard, fail-closed budget caps per key/user/team plus RPM/TPM limits that block over-budget requests. `maintained`.
+- [costbomb](https://github.com/swarmproof/costbomb) - denial-of-wallet *fuzzing*: finds inputs that blow up your bill and gates CI on spend. Complements enforcement gateways — finds what slips past caps. `maintained`.
 
 ## Benchmarks
 
