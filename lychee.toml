@@ -1,0 +1,21 @@
+# lychee link-checker config (used by CI: .github/workflows/lint.yml + link-sweep.yml)
+# TEST-PLAN.md §2a: fail on 4xx/5xx, short retry + timeout, documented ignore-list
+# only for hosts that block non-browser clients.
+
+max_retries = 3
+timeout = 20
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (lychee link check for awesome-agent-reliability)"
+accept = ["200..=299", "301", "302", "303", "308"]
+
+exclude = [
+  # nsa.gov WAF returns 403 to any non-browser client; the PDF loads in a real
+  # browser (verified manually 2026-07). Re-check at each monthly refresh.
+  "^https://www\\.nsa\\.gov/",
+  # SSRN's WAF also 403s non-browser clients (verified loads in browser 2026-07).
+  "^https://papers\\.ssrn\\.com/",
+  # RFC 2606 placeholder domains used in test fixtures — never real entries.
+  "^https?://example\\.com",
+]
+
+# Anchors in our own README are checked by scripts/format-lint.mjs (TOC sync).
+include_fragments = false

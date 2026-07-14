@@ -1,0 +1,41 @@
+# CI gate (TEST-PLAN.md §2a): every PR / push to main must pass
+#   1. awesome-lint   — structure conformance to the `awesome` standard
+#   2. format lint    — entry grammar + tag validity + TOC sync (scripts/format-lint.mjs)
+#   3. dead-link check — lychee over README.md + docs/** (config in lychee.toml)
+# A PR that fails here never reaches human review; one that passes still faces
+# the curation-policy merit bar (docs/ARCHITECTURE.md §5).
+
+name: lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: format lint self-test (fixtures)
+        run: node scripts/format-lint.mjs --self-test
+
+      - name: format lint (entry grammar, tags, TOC sync)
+        run: node scripts/format-lint.mjs README.md
+
+      - name: awesome-lint
+        run: npx --yes awesome-lint README.md
+
+      - name: dead-link check (README + docs)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --no-progress README.md docs/
+          fail: true

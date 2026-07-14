@@ -1,0 +1,36 @@
+# Scheduled monthly dead-link sweep (TEST-PLAN.md §2b): catches rot introduced by
+# the outside world, not by a PR. Opens an issue listing newly-dead links so the
+# monthly refresh (DELIVERY-PLAN.md M2) can fix, re-tag, or CUT them.
+
+name: link-sweep
+
+on:
+  schedule:
+    - cron: '0 6 1 * *' # 06:00 UTC on the 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: full dead-link sweep
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --no-progress README.md docs/ CONTRIBUTING.md
+          output: ./lychee-report.md
+          fail: false
+
+      - name: open issue if links are dead
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Monthly link sweep: dead links found'
+          content-filepath: ./lychee-report.md
+          labels: link-rot, monthly-refresh
