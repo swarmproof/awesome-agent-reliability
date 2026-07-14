@@ -131,14 +131,14 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 *The specs — protocol, security top-10s, and telemetry conventions.*
 
-- [Model Context Protocol — Specification](https://modelcontextprotocol.io/specification/2025-11-25) - the protocol nearly every entry here assumes. `maintained`.
-- [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/) - first dedicated Top-10 for MCP (token mismanagement, scope creep, tool poisoning, supply chain). `research`.
-- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) - model-layer risks (prompt injection, data poisoning). `research`.
-- [OWASP Top 10 for Agentic Applications](https://genai.owasp.org) - autonomous-agent-behavior risks + a guide for third-party MCP servers (finalized Dec 2025). `research`.
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - risk-management framework; NIST agent-standards initiative began Feb 2026. `research`.
-- [CSA AI Controls Matrix (AICM)](https://cloudsecurityalliance.org/artifacts/ai-controls-matrix) - 243 control objectives / 18 domains; maps to ISO 42001 and NIST AI RMF. `research`.
-- [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions) - the emerging telemetry standard for agent observability (agents, tasks, tools, memory spans). `maintained`.
-- [NSA — MCP Security guidance (CSI)](https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf) - government guidance on securing MCP. `research`.
+- [Model Context Protocol — Specification](https://modelcontextprotocol.io/specification) - the protocol nearly every entry here assumes (link tracks the latest revision). `maintained`.
+- [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/) - first dedicated Top-10 for MCP (token mismanagement, scope creep, tool poisoning, supply chain); still draft/beta. `research`.
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) - model-layer risks (prompt injection, data poisoning); the de-facto LLM-risk checklist scanners map to. `research`.
+- [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) - autonomous-agent-behavior risks (ASI01–ASI10), finalized Dec 2025. `research`.
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - risk-management framework; NIST agent-standards initiative began Feb 2026. Governance-side more than engineering-side. `research`.
+- [CSA AI Controls Matrix (AICM)](https://cloudsecurityalliance.org/artifacts/ai-controls-matrix) - 243 control objectives / 18 domains; maps to ISO 42001 and NIST AI RMF. Compliance/audit-side. `research`.
+- [OpenTelemetry GenAI Semantic Conventions](https://github.com/open-telemetry/semantic-conventions-genai) - spans/metrics for GenAI + MCP; the convention major observability vendors converge on. Experimental. `maintained`.
+- [NSA — MCP Security guidance (CSI)](https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf) - government guidance on securing MCP (site blocks non-browser clients; loads in a browser). `research`.
 
 ## Tooling (MCP quality & ops)
 
