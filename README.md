@@ -45,7 +45,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 - [agentevals](https://github.com/langchain-ai/agentevals) - open evaluators for agent trajectories and outputs; trajectory match (strict/unordered/subset/superset) + LLM-as-judge. `maintained`.
 - [DeepEval](https://github.com/confident-ai/deepeval) - "pytest for LLMs"; 30+ metrics incl. tool-call accuracy and task completion (OSS core; Confident AI is the paid platform). `maintained`.
-- [Ragas](https://github.com/explodinggradients/ragas) - RAG-eval standard extended to agents (Agent Goal Accuracy, Tool Call Accuracy); experiments-first workflow. `maintained`.
+- [Ragas](https://github.com/vibrantlabsai/ragas) - RAG-eval standard extended to agents (Agent Goal Accuracy, Tool Call Accuracy) *(formerly explodinggradients; now Vibrant Labs, OSS core retained)*. `maintained`.
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix) - self-hostable observability + eval on OpenTelemetry; 50+ evaluators over the full agent reasoning loop. `maintained`.
 - [LangWatch](https://github.com/langwatch/langwatch) - OSS-core eval + monitoring with UI-driven eval building for non-engineers (commercial cloud tier). `maintained`.
 - [LangSmith](https://www.langchain.com/langsmith) - best-in-class framework-native trajectory eval for LangChain/LangGraph users; closed platform. `commercial`.
