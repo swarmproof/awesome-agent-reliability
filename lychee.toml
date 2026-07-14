@@ -17,5 +17,5 @@ exclude = [
   "^https?://example\\.com",
 ]
 
-# Anchors in our own README are checked by scripts/format-lint.mjs (TOC sync).
-include_fragments = false
+# Fragment/anchor checking stays off (lychee's default); anchors in our own
+# README are checked by scripts/format-lint.mjs (TOC sync).
