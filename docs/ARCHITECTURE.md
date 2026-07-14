@@ -82,7 +82,7 @@ Exactly three tags. The test for each is objective enough for a contributor to s
 |---|---|---|---|
 | `maintained` | Runnable software, actively developed (commit/release within the refresh window), OSS or OSS-core. | agentevals, garak, LangGraph, Helicone, Restate | OSS-core with a paid cloud → `maintained` **+** an inline note of the commercial tier (e.g., "OSS + Temporal Cloud"). |
 | `research` | The artifact is *knowledge*: a paper, dataset, benchmark spec, or standard/guidance document. | MAST, LiveMCP-101, OWASP MCP Top 10, NSA CSI. | A benchmark with a maintained *harness* (MCPBench) → `maintained`; a benchmark that is primarily a paper/dataset → `research`. |
-| `commercial` | Closed, paid product with no meaningful OSS core. | LangSmith, Braintrust, Galileo. | Capped per section (PRD REQ-12). Acquired-but-still-OSS (promptfoo) stays `maintained` with an ownership note. |
+| `commercial` | Closed, paid product with no meaningful OSS core. | LangSmith, Braintrust, Galileo. | Capped per section to avoid vendor sprawl. Acquired-but-still-OSS (promptfoo) stays `maintained` with an ownership note. |
 
 **Staleness handling:** a `maintained` entry that goes dormant past the refresh window is either re-tagged (`research`/archived note) or CUT at the monthly pass. Tags are a *promise to the reader* about current state — they must stay true.
 
@@ -100,7 +100,7 @@ An entry is **KEEP** only if it passes **all five**:
 
 **Hard CUT list (auto-reject):** SEO "Top N …" listicles, content-farm aggregators, marketing landing pages with no substance, dead/abandoned repos, and anything requiring login to view.
 
-**The honesty clause (non-negotiable):** the maintainer's own Swarm Proof tools are judged by criteria 1–5 identically, tagged identically, and **ordered honestly within their section** — placed below stronger competitors where that is the truth (e.g., agent-postmortems listed *after* AIID/OECD/AIAAIC; exactly-once framed as a narrow idempotency layer, not a peer of Temporal). Ranking own tools above better competitors is an automatic policy violation (PRD NFR-1).
+**The honesty clause (non-negotiable):** the maintainer's own Swarm Proof tools are judged by criteria 1–5 identically, tagged identically, and **ordered honestly within their section** — placed below stronger competitors where that is the truth (e.g., agent-postmortems listed *after* AIID/OECD/AIAAIC; exactly-once framed as a narrow idempotency layer, not a peer of Temporal). Ranking own tools above better competitors is an automatic policy violation.
 
 ---
 
@@ -140,7 +140,7 @@ Merge → next monthly refresh verifies liveness
 
 ## 7. Optional later tooling (derived, not required)
 
-v0 is a README. Everything below is *later* and *optional* (PRD NG4), and — critically — **derived from the same source data** so there's one source of truth.
+v0 is a README. Everything below is *later* and *optional*, and — critically — **derived from the same source data** so there's one source of truth.
 
 ### 7a. Data-first refactor (enables everything else)
 Introduce `data/entries.yaml` (or per-section YAML) as the machine-readable source of truth; the README is *generated* from it. Each record:
@@ -181,7 +181,7 @@ From the YAML: a static site (e.g., zero-backend SSG) with **filter by section, 
 **Decision:** keep prose Markdown as the source at v0; adopt `entries.yaml` only when entry count / site plans justify it. **Why:** premature data-modeling raises the contribution barrier (YAML PRs) before the list is big enough to need it. **Consequence:** the generated-site plan (§7c) is blocked on this ADR flipping to "adopted."
 
 ### ADR-006 — Own tools ranked honestly, in-section, same tags
-**Decision:** Swarm Proof tools obey the identical schema, tags, and ordering rules; where a competitor is stronger, it is listed above the own tool. **Why:** the honesty is the entire product (PRD NFR-1); a self-serving list is worthless. **Consequence:** this is enforced in review and is grounds for reverting a merge.
+**Decision:** Swarm Proof tools obey the identical schema, tags, and ordering rules; where a competitor is stronger, it is listed above the own tool. **Why:** the honesty is the entire product; a self-serving list is worthless. **Consequence:** this is enforced in review and is grounds for reverting a merge.
 
 ### ADR-007 — Entry grammar amended for awesome-lint conformance
-**Decision:** the link↔description separator is a plain hyphen (` - `), the trailing tag is followed by a terminal period, and the README carries no `## License` section (the LICENSE file is authoritative). **Why:** `awesome-lint` — the gate `sindresorhus/awesome` applies to submissions (DELIVERY-PLAN M1.1, TEST-PLAN scenario I, PRD M7) — rejects em/en-dash separators, list items not ending in punctuation, and a License section when a LICENSE file exists. The original §3 grammar could never pass the meta-list's own linter; conformance wins because meta-list acceptance is a primary success metric (PRD M1). **Also:** awesome-lint's `double-link` rule is disabled file-wide in the README (HTML comment at top) because ADR-003 cross-listings *require* duplicate canonical URLs; accidental duplicates are still caught by `scripts/format-lint.mjs` via an explicit cross-list allowlist. **Consequence:** §3 grammar, the PR template, CONTRIBUTING, and format-lint all encode the amended grammar; em dashes remain legal inside descriptions.
+**Decision:** the link↔description separator is a plain hyphen (` - `), the trailing tag is followed by a terminal period, and the README carries no `## License` section (the LICENSE file is authoritative). **Why:** `awesome-lint` — the gate `sindresorhus/awesome` applies to submissions (TEST-PLAN scenario I) — rejects em/en-dash separators, list items not ending in punctuation, and a License section when a LICENSE file exists. The original §3 grammar could never pass the meta-list's own linter; conformance wins. **Also:** awesome-lint's `double-link` rule is disabled file-wide in the README (HTML comment at top) because ADR-003 cross-listings *require* duplicate canonical URLs; accidental duplicates are still caught by `scripts/format-lint.mjs` via an explicit cross-list allowlist. **Consequence:** §3 grammar, the PR template, CONTRIBUTING, and format-lint all encode the amended grammar; em dashes remain legal inside descriptions.

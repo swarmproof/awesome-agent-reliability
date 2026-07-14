@@ -47,8 +47,8 @@ Every content change is judged against `docs/ARCHITECTURE.md`. The essentials:
 ## Supporting docs
 
 - `docs/RESEARCH.md` — annotated field survey with keep/cut/hold judgments for every candidate; consult before adding or removing entries.
-- `docs/PRD.md`, `docs/DELIVERY-PLAN.md`, `docs/TEST-PLAN.md` — goals, milestones, and the planned CI design.
-- `docs/PROPOSED-README.md` — the draft that was already adopted as `README.md` (commit 2d0155c); treat it as historical, don't edit it in place of the README.
+- `docs/TEST-PLAN.md` — what CI validates and the Given/When/Then scenarios behind it.
+- This repo is public-facing: keep planning, strategy, and internal notes out of tracked files (the gitignored `internal/` directory exists locally for that).
 
 ## Conventions
 

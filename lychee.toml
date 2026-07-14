@@ -19,8 +19,3 @@ exclude = [
 
 # Fragment/anchor checking stays off (lychee's default); anchors in our own
 # README are checked by scripts/format-lint.mjs (TOC sync).
-
-# PROPOSED-README.md is the archived pre-adoption draft (superseded by the root
-# README, kept as a historical record); its relative links resolve wrongly from
-# docs/ and are not maintained.
-exclude_path = ["docs/PROPOSED-README.md"]

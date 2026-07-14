@@ -29,7 +29,7 @@
 
 ### 2b. Scheduled — monthly cron (`schedule: cron`)
 - Full dead-link sweep over the whole repo (catches rot introduced by the outside world, not a PR).
-- Opens an issue listing any newly-dead links for the monthly refresh (M2 in DELIVERY-PLAN).
+- Opens an issue listing any newly-dead links for the monthly refresh.
 
 ### 2c. Local dev
 - A `make lint` / `npm run lint` that runs the same three checks so contributors catch failures before pushing.
@@ -114,7 +114,7 @@ The list is **healthy** when, on `main`:
 ## 6. Non-goals for testing
 
 - No attempt to *auto-judge relevance/quality/honesty* — those are deliberately human judgments; automating them would undermine the trustworthiness of the curation.
-- No screenshot/visual regression at v0 (README-only; revisit if the generated site ships, DELIVERY-PLAN M3).
+- No screenshot/visual regression at v0 (README-only; revisit if a generated site ships later).
 - No performance testing (static content).
 
 ---

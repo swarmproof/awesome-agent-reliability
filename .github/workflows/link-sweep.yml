@@ -1,6 +1,6 @@
 # Scheduled monthly dead-link sweep (TEST-PLAN.md §2b): catches rot introduced by
 # the outside world, not by a PR. Opens an issue listing newly-dead links so the
-# monthly refresh (DELIVERY-PLAN.md M2) can fix, re-tag, or CUT them.
+# monthly refresh can fix, re-tag, or CUT them.
 
 name: link-sweep
 

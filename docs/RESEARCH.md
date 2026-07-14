@@ -267,5 +267,5 @@ A recurring **CUT** class this cycle: the field is drowning in "Top N AI Agent E
 
 - MCP spec revision 2026-07-28 should have finalized — confirm the `/specification` root resolves to it.
 - Re-check: promptfoo "acquired by OpenAI" provenance (nothing contradicts it; not freshly corroborated this cycle) · Hatchet adoption trend · Galileo Agent Control (Security) · τ³-bench.
-- Competing/adjacent curated list: `yzhao062/awesome-auditable-ai` — review for differentiation and candidate-mining.
+- Adjacent curated list: `yzhao062/awesome-auditable-ai` — review for scope overlap and entry candidates.
 - nsa.gov / nist.gov / media.defense.gov / ssrn.com 403 automated checkers (bot policy, not rot) — excluded in `lychee.toml`; verify in a browser each refresh.
