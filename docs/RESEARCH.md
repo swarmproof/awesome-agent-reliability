@@ -155,7 +155,7 @@ A recurring **CUT** class this cycle: the field is drowning in "Top N AI Agent E
 | OECD AI Incidents & Hazards Monitor (AIM) | https://oecd.ai/en/incidents | `maintained` | ~5,000–7,000 incident-reports from news monitoring; policy-grade. | **KEEP** |
 | AIAAIC Repository | https://www.aiaaic.org | `maintained` | Independent repository of AI, algorithmic & automation incidents/controversies; widely cited. | **KEEP** |
 | MIT AI Risk Repository | https://airisk.mit.edu | `research` | Risk taxonomy + incident tracking; cross-listed from Foundations. | **KEEP** |
-| agent-postmortems (Swarm Proof) | https://github.com/swarmproof/agent-postmortems | `maintained` | Structured DB of *agent-specific* failures + a reporting standard. **Honest positioning:** the generalist databases above are broader and larger; agent-postmortems is narrower and deeper (agent-only, structured schema, activity-level detail the generalists explicitly lack). List it *below* AIID/OECD/AIAAIC, not above. Already in README. | **KEEP** |
+| agent-postmortems (Swarm Proof) | `github.com/swarmproof/agent-postmortems` | `maintained` | Structured DB of *agent-specific* failures + a reporting standard. **Honest positioning:** the generalist databases above are broader and larger; agent-postmortems is narrower and deeper (agent-only, structured schema, activity-level detail the generalists explicitly lack). List it *below* AIID/OECD/AIAAIC, not above. | **CUT 2026-07-15** — repo went private; fails criterion 2 (reachable). Re-add below the generalist DBs when public again. |
 | *Incident Analysis for AI Agents* | https://arxiv.org/pdf/2508.14231 | `research` | Aug 2025. Argues existing DBs miss agent-specific detail (logs, tools) — the intellectual case for agent-postmortems' existence. Good honest cross-cite. | **KEEP** |
 | *Open Problems in AI Incident Governance* | https://arxiv.org/html/2607.05163 | `research` | Jul 2026. Governance framing; useful pointer. | **HOLD** |
 
@@ -268,4 +268,5 @@ A recurring **CUT** class this cycle: the field is drowning in "Top N AI Agent E
 - MCP spec revision 2026-07-28 should have finalized — confirm the `/specification` root resolves to it.
 - Re-check: promptfoo "acquired by OpenAI" provenance (nothing contradicts it; not freshly corroborated this cycle) · Hatchet adoption trend · Galileo Agent Control (Security) · τ³-bench.
 - Adjacent curated list: `yzhao062/awesome-auditable-ai` — review for scope overlap and entry candidates.
+- agent-postmortems entry was CUT 2026-07-15 (repo went private → unreachable). If the repo is public again, restore it to Incidents, ranked below AIID/OECD/AIAAIC per the honesty ordering.
 - nsa.gov / nist.gov / media.defense.gov / ssrn.com 403 automated checkers (bot policy, not rot) — excluded in `lychee.toml`; verify in a browser each refresh.
