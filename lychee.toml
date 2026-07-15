@@ -13,6 +13,9 @@ exclude = [
   "^https://www\\.nsa\\.gov/",
   # SSRN's WAF also 403s non-browser clients (verified loads in browser 2026-07).
   "^https://papers\\.ssrn\\.com/",
+  # metr.org refuses connections from GitHub Actions runner IPs (loads fine in a
+  # browser and from residential IPs; verified 2026-07). Re-check monthly.
+  "^https://metr\\.org",
   # RFC 2606 placeholder domains used in test fixtures — never real entries.
   "^https?://example\\.com",
 ]
