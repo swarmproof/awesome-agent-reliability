@@ -85,6 +85,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [LlamaFirewall](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall) - Meta's agent guardrail: PromptGuard 2 injection filter, AlignmentCheck reasoning auditor, CodeShield; Llama license. `maintained`.
 - [NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) - NVIDIA's programmable rails (Colang) for safety, topic, and jailbreak checks; dialogue-centric more than agent-trajectory. `maintained`.
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - input/output validation with a hub of reusable validators (PII, toxicity, structure); a validation layer, not red-teaming. `maintained`.
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Microsoft's cross-framework policy kernel intercepting tool calls/messages/delegations; covers the OWASP Agentic Top 10. Public Preview. `maintained`.
 
 ## Checkpointing & recovery
 
