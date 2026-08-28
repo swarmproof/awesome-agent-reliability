@@ -12,7 +12,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 **Tags:** `maintained` (runnable, actively developed) · `research` (paper / dataset / spec) · `commercial` (closed, paid). See [`docs/ARCHITECTURE.md`](https://github.com/swarmproof/awesome-agent-reliability/blob/main/docs/ARCHITECTURE.md) for the tagging rubric and inclusion criteria.
 
-*Last refreshed: 2026-07.*
+*Last refreshed: 2026-08.*
 
 ## Contents
 
@@ -129,7 +129,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [SWE-bench](https://github.com/princeton-nlp/SWE-bench) - real GitHub bug-fixes; the coding-agent standard (Verified split saturated at the frontier). `research`.
 - [GAIA](https://arxiv.org/abs/2311.12983) - general-assistant tasks across three difficulty levels (Level 3 still hard); dataset access now login-gated on HF. `research`.
 - [WebArena](https://github.com/web-arena-x/webarena) - multi-step browser tasks in realistic web environments. `research`.
-- [ClawBench](https://github.com/reacher-z/ClawBench) - 153 everyday browser tasks across 144 live websites, with final-request interception and five-layer execution traces for reliability analysis. `research`.
+- [ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) - EMNLP 2026; 152 everyday tasks on live websites, graded by final-request interception; public leaderboard + traces. `maintained`.
 - [OSWorld](https://github.com/xlang-ai/OSWorld) - computer-use on a real desktop; hard and un-saturated. `research`.
 
 ## Incidents & post-mortems

@@ -263,6 +263,12 @@ A recurring **CUT** class this cycle: the field is drowning in "Top N AI Agent E
 - **Inngest/Hatchet as a pair-HOLD** — resolved: Inngest ADDED, Hatchet HELD (above).
 - **Weave** (970k dl/mo; redundant with Phoenix/Opik lane, no distinct reliability capability) · **MLflow GenAI eval** (platform feature, too broad) · **OpenAI Evals** (benchmark registry, slowing; not a trajectory evaluator) · **LiteLLM-as-evaluator** (it's a gateway; listed under Cost instead) · **Golem** (18 PyPI dl/mo — marketing-strong, usage-absent; BSL) · **Resonate** (2.2k dl/mo; redundant with Restate) · **OpenRouter spend caps** (account feature, not a deployable tool) · **Rebuff, LLM Guard** (archived; ProtectAI absorbed into Palo Alto) · **Lasso mcp-gateway** (dormant since Jan 2026) · **mcpo** (plain proxy, no guardrails) · **Lakera Guard, Prompt Security** (commercial marketing pages; cap + redundancy) · **ARE Incident Database** (vendor-run with disclosed COI — entries classified by whether the vendor's product stops them; fails neutrality without a caveat the entry can't carry) · **ISO/IEC 42001 agent guidance** (paywalled — fails reachable) · **EU AI Act GPAI Code** (model-scoped, not agent-reliability) · **NCCoE agent-identity paper** (draft, no ratified spec) · **individual Replit/PocketOS incident news articles** (news coverage, not structured primary sources; the structured records live in AIID) · **h5i-dev/awesome-ai-agent-incidents & similar** (non-canonical aggregators).
 
+## 2026-08 additions
+
+| Entry | Section | Judgment |
+|---|---|---|
+| ClawBench (TIGER-AI-Lab) | Benchmarks | **KEEP** — first community PR (#5). EMNLP 2026 Findings, arXiv 2604.08523, 601★/43 forks in ~4 months, active harness, public HF leaderboard + trace datasets. Distinct: live-website evaluation with final-request interception (WebArena uses sandboxed replicas; OSWorld is desktop). Maintainer fixes at merge: canonical org URL (repo transferred from the author's personal account), tag `research`→`maintained` (actively maintained harness per §4 edge rule), task count 153→152 (matches the shipping corpus per the project's own footnote). |
+
 ## Notes for next refresh (2026-08)
 
 - MCP spec revision 2026-07-28 should have finalized — confirm the `/specification` root resolves to it.
