@@ -129,6 +129,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [SWE-bench](https://github.com/princeton-nlp/SWE-bench) - real GitHub bug-fixes; the coding-agent standard (Verified split saturated at the frontier). `research`.
 - [GAIA](https://arxiv.org/abs/2311.12983) - general-assistant tasks across three difficulty levels (Level 3 still hard); dataset access now login-gated on HF. `research`.
 - [WebArena](https://github.com/web-arena-x/webarena) - multi-step browser tasks in realistic web environments. `research`.
+- [ClawBench](https://github.com/reacher-z/ClawBench) - 153 everyday browser tasks across 144 live websites, with final-request interception and five-layer execution traces for reliability analysis. `research`.
 - [OSWorld](https://github.com/xlang-ai/OSWorld) - computer-use on a real desktop; hard and un-saturated. `research`.
 
 ## Incidents & post-mortems
