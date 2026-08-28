@@ -62,7 +62,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 - [IntellAgent](https://github.com/plurai-ai/intellagent) - builds synthetic test suites from policy graphs; simulates thousands of realistic edge-case conversations to surface hidden failures. `maintained`.
 - [τ-bench](https://github.com/sierra-research/tau-bench) - LLM user-simulator + tool APIs + policy docs; introduced `pass^k` (consistency across repeats). Also a [benchmark](#benchmarks). `research`.
-- [τ²-bench](https://github.com/sierra-research/tau2-bench) - dual-control successor with voice + knowledge-retrieval domains. Also a [benchmark](#benchmarks). `research`.
+- [τ²-bench](https://github.com/sierra-research/tau2-bench) - dual-control successor with voice + knowledge domains; the repo now also ships τ³-bench (banking RAG domain, full-duplex voice). Also a [benchmark](#benchmarks). `research`.
 - [Strands Evals](https://github.com/strands-agents/evals) - agent eval SDK with adaptive simulated users (ActorSimulator) + deterministic fault injection (ChaosPlugin: timeouts, corruption). Early. `maintained`.
 - [stampede](https://github.com/swarmproof/stampede) - generates realistic + adversarial agent *populations* against your MCP server / API / protocol (tests agents→system, vs τ-bench's users→agent). Earlier-stage than τ-bench; complementary. `maintained`.
 - [mockworld](https://github.com/swarmproof/mockworld) - high-fidelity fake services (Stripe/Gmail/exchange) as instant MCP servers for safe agent testing. `maintained`.
@@ -118,7 +118,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 *Fixed task sets for comparing agents, framed by a reliability lens (consistency, policy adherence) — not just capability.*
 
 - [τ-bench](https://github.com/sierra-research/tau-bench) - policy adherence + `pass^k` consistency; the most reliability-relevant benchmark (a task completed but policy-violating = fail). Also in [Simulation](#simulation--stress-testing). `research`.
-- [τ²-bench](https://github.com/sierra-research/tau2-bench) - dual-control successor to τ-bench (agent and user both act); voice + knowledge-retrieval domains. Also in [Simulation](#simulation--stress-testing). `research`.
+- [τ²-bench](https://github.com/sierra-research/tau2-bench) - dual-control successor to τ-bench (agent and user both act); now ships τ³-bench (banking RAG, full-duplex voice). Also in [Simulation](#simulation--stress-testing). `research`.
 - [METR HCAST / Time Horizons](https://metr.org) - the longest task an agent finishes 50% of the time — a distinctive reliability-over-time framing. `research`.
 - [CAR-bench](https://arxiv.org/abs/2601.22027) - `pass^k` consistency + limit-awareness (does the agent know what it can't do?); 248 tasks, AgentBeats-integrated. Early. `research`.
 - [LiveMCP-101](https://arxiv.org/abs/2508.15760) - 101 real queries needing coordinated multi-MCP-tool use; frontier models score <60%; identifies 7 failure modes. `research`.
