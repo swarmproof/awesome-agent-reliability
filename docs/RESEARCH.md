@@ -269,10 +269,32 @@ A recurring **CUT** class this cycle: the field is drowning in "Top N AI Agent E
 |---|---|---|
 | ClawBench (TIGER-AI-Lab) | Benchmarks | **KEEP** — first community PR (#5). EMNLP 2026 Findings, arXiv 2604.08523, 601★/43 forks in ~4 months, active harness, public HF leaderboard + trace datasets. Distinct: live-website evaluation with final-request interception (WebArena uses sandboxed replicas; OSWorld is desktop). Maintainer fixes at merge: canonical org URL (repo transferred from the author's personal account), tag `research`→`maintained` (actively maintained harness per §4 edge rule), task count 153→152 (matches the shipping corpus per the project's own footnote). |
 
-## Notes for next refresh (2026-08)
+## 2026-08 refresh — staleness & link pass (2026-08-28)
 
-- MCP spec revision 2026-07-28 should have finalized — confirm the `/specification` root resolves to it.
-- Re-check: promptfoo "acquired by OpenAI" provenance (nothing contradicts it; not freshly corroborated this cycle) · Hatchet adoption trend · Galileo Agent Control (Security) · τ³-bench.
-- Adjacent curated list: `yzhao062/awesome-auditable-ai` — review for scope overlap and entry candidates.
-- agent-postmortems was briefly CUT 2026-07-15 (repo temporarily private → unreachable) and restored the same day when it went public again. Verify it stays public.
-- nsa.gov / nist.gov / media.defense.gov / ssrn.com 403 automated checkers (bot policy, not rot) — excluded in `lychee.toml`; verify in a browser each refresh.
+- **Link pass:** 83/84 URLs resolve (the exception is nsa.gov's WAF, excluded with a dated note; verified in a browser).
+- **Staleness sweep:** all 39 GitHub-hosted `maintained` entries checked via API (`pushed_at`, `archived`). 38 active within the window; none archived.
+- **CUT: Ragas** — dormant on all axes: last commit 2026-02-24, last PyPI release 2026-01-13 (~7 months). Same pattern and same treatment as Invariant Guardrails in July (OSS frozen after a commercial pivot — Vibrant Labs). Still widely installed, but `maintained` must stay a true promise and no other tag fits a dormant tool. Restore if OSS development resumes.
+
+## 2026-08 refresh — checklist outcomes (2026-08-28)
+
+- **MCP spec**: 2026-07-28 revision finalized (stateless core, sessions removed); the revision-agnostic `/specification` link resolves to it. No entry change.
+- **promptfoo provenance**: CORROBORATED — OpenAI announced the acquisition 2026-03-09 (openai.com/index/openai-to-acquire-promptfoo/); license still MIT via API. Entry note stands; caveat retired.
+- **τ³-bench**: ships inside the τ²-bench repo (banking knowledge-retrieval domain, full-duplex voice, 75+ task fixes; sierra.ai research page). Both τ²-bench entry lines updated; no new entry (same canonical URL).
+- **ADDED — Agent Governance Toolkit** (microsoft/agent-governance-toolkit, 6.1k★, MIT, PyPI/npm/NuGet): cross-framework policy control plane; covers OWASP Agentic Top 10. Distinct category (centralized control plane vs our per-app guardrail libraries). Public Preview + early adoption (npm ~14k/mo) noted; placed last in guardrails per adoption honesty.
+- **ADDED — AgentDojo** (ethz-spylab/agentdojo, 776★, NeurIPS 2024 D&B): canonical prompt-injection benchmark for tool-using agents (97 tasks / 629 security cases). Distinct from garak/PyRIT (toolkits, not fixed benchmarks). Cross-listed Benchmarks ↔ Security.
+- **HOLD — Hatchet** (strongest hold): adoption surged (PyPI 1.49M/mo, npm 1.11M/mo — now exceeds DBOS) and release velocity is high, but the July objection was redundancy (criterion 4) in a 7-engine section, unchanged. Flip to KEEP next cycle if the trend holds and a distinct capability emerges.
+- **HOLD — Galileo Agent Control** (agentcontrol/agent-control, 300★, confirmed Galileo's vendor-neutral Apache-2.0 release): real and active, but head-to-head redundant with AGT in the control-plane category; AGT is the stronger pick (6.1k★, broader surface).
+- **HOLD — Who&When** (ag2ai/Agents_Failure_Attribution, 385★, ICML 2025 Spotlight): failure *attribution* benchmark, distinct from MAST's taxonomy; below the adoption bar this cycle.
+- **Adjacent list** (yzhao062/awesome-auditable-ai): live but partly self-promotional (owner's micro-repos skipped). Mined AgentDojo + AGT + Who&When from it. Rejected: AgenTracer, Aegis, agent-audit, TraceElephant, ReliabilityBench (redundant or no adoption).
+- **New since mid-July**: nothing else cleared the practitioner bar (early papers logged: 2608.13867, 2604.16706, 2606.25819, MAESTRO 2601.00481).
+
+## Notes for next refresh (2026-09)
+
+- **Hatchet** — flip-watch: if adoption keeps compounding, the redundancy call should be re-litigated in its favor.
+- **AGT** — Public Preview: check GA status and adoption (npm/PyPI trend); revisit its last-place guardrails ranking.
+- **Ragas** — restore if OSS development resumes (was cut 2026-08: dormant since Feb, commercial pivot).
+- **Who&When / Galileo Agent Control** — re-judge on adoption.
+- **τ³-bench** — watch for a standalone repo/paper (currently inside tau2-bench).
+- **MCP spec** — next revision cadence; the `/specification` root link self-updates but verify.
+- **agent-postmortems** — verify it stays public (went briefly private mid-July).
+- nsa.gov / nist.gov / media.defense.gov / ssrn.com / metr.org block automated checkers (bot policy, not rot) — excluded in `lychee.toml`; verify in a browser each refresh.
