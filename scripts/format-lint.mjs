@@ -28,6 +28,7 @@ const CROSS_LIST = [
   'https://github.com/sierra-research/tau-bench',
   'https://github.com/sierra-research/tau2-bench',
   'https://github.com/promptfoo/promptfoo', // Evaluation + Security
+  'https://github.com/ethz-spylab/agentdojo', // Benchmarks + Security
 ];
 
 // Entry grammar. Name may contain any chars except `]`; URL must be http(s);

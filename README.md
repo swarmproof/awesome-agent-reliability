@@ -86,6 +86,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) - NVIDIA's programmable rails (Colang) for safety, topic, and jailbreak checks; dialogue-centric more than agent-trajectory. `maintained`.
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - input/output validation with a hub of reusable validators (PII, toxicity, structure); a validation layer, not red-teaming. `maintained`.
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Microsoft's cross-framework policy kernel intercepting tool calls/messages/delegations; covers the OWASP Agentic Top 10. Public Preview. `maintained`.
+- [AgentDojo](https://github.com/ethz-spylab/agentdojo) - fixed benchmark of prompt-injection attacks + defenses for tool-using agents. Also a [benchmark](#benchmarks). `research`.
 
 ## Checkpointing & recovery
 
@@ -126,6 +127,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [LiveMCPBench](https://icip-cas.github.io/LiveMCPBench/) - navigating a large MCP toolset; note: tasks are relatively simple (~2.7 tool calls avg). `research`.
 - [MCPBench](https://github.com/modelscope/MCPBench) - evaluates MCP servers (Web Search / DB / GAIA) on accuracy, latency, and token cost; harness dormant since Apr 2025. `research`.
 - [MCP-SafetyBench](https://arxiv.org/pdf/2512.15163) - safety evaluation of LLMs against real-world MCP servers; bridges benchmarks and security. `research`.
+- [AgentDojo](https://github.com/ethz-spylab/agentdojo) - prompt-injection attacks + defenses on tool-using agents; 97 tasks / 629 security cases (ETH Zurich, NeurIPS 2024). Also in [Security](#security). `research`.
 - [SWE-bench](https://github.com/princeton-nlp/SWE-bench) - real GitHub bug-fixes; the coding-agent standard (Verified split saturated at the frontier). `research`.
 - [GAIA](https://arxiv.org/abs/2311.12983) - general-assistant tasks across three difficulty levels (Level 3 still hard); dataset access now login-gated on HF. `research`.
 - [WebArena](https://github.com/web-arena-x/webarena) - multi-step browser tasks in realistic web environments. `research`.
