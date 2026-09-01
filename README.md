@@ -16,6 +16,7 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 
 ## Contents
 
+- [Failure-mode index](#failure-mode-index)
 - [Foundations](#foundations)
 - [Evaluation](#evaluation)
 - [Simulation & stress-testing](#simulation--stress-testing)
@@ -26,6 +27,22 @@ The agent-reliability space is fragmenting fast — eval tools, sim tools, secur
 - [Incidents & post-mortems](#incidents--post-mortems)
 - [Standards](#standards)
 - [Tooling (MCP quality & ops)](#tooling-mcp-quality--ops)
+
+## Failure-mode index
+
+Debugging a specific failure? Jump to the sections and tools that address it — failure classes drawn from the taxonomies in [Foundations](#foundations).
+
+| If your agent… | Look at | Representative entries |
+|---|---|---|
+| loops forever / never terminates | [Cost](#cost--economics), [Checkpointing](#checkpointing--recovery) | LiteLLM (budget caps), costbomb, step limits in LangGraph/Temporal |
+| is vulnerable to prompt injection or tool poisoning | [Security](#security) | Snyk Agent Scan, garak, PyRIT, LlamaFirewall, AgentDojo |
+| repeats side-effects on retry (double charge / email) | [Checkpointing](#checkpointing--recovery) | exactly-once, Temporal, Restate, DBOS (idempotency) |
+| blows up spend / denial-of-wallet | [Cost](#cost--economics) | LiteLLM, costbomb, Langfuse |
+| completes the task but violates policy | [Evaluation](#evaluation), [Benchmarks](#benchmarks) | trajectory evaluators, τ-bench (pass^k) |
+| gives inconsistent results run-to-run | [Benchmarks](#benchmarks), [Simulation](#simulation--stress-testing) | τ-bench (pass^k), CAR-bench, IntellAgent |
+| crashes or is preempted mid-run | [Checkpointing](#checkpointing--recovery) | LangGraph, Temporal, DBOS, Inngest |
+| can't be observed / debugged after the fact | [Evaluation](#evaluation), [Standards](#standards) | Phoenix, Langfuse, Opik, OpenTelemetry GenAI |
+| misbehaves as a multi-agent system | [Foundations](#foundations), [Simulation](#simulation--stress-testing) | MAST, "Don't Build Multi-Agents", IntellAgent |
 
 ## Foundations
 
