@@ -52,4 +52,4 @@ A PR that passes CI still faces the merit bar; a maintainer may decline it with 
 - **Honest over impressive** — we don't overpromise guarantees; we document boundaries.
 - **Watchable & reproducible** — outputs should be seedable and screenshot-worthy.
 
-By contributing you agree your work is licensed under this repo's LICENSE (Apache-2.0).
+By contributing you agree your work is released under the repo's licensing: list content and docs under [CC0-1.0](./LICENSE) (public domain), and any code under `scripts/` under [Apache-2.0](./scripts/LICENSE).
