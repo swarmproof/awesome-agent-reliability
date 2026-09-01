@@ -73,6 +73,8 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [LangSmith](https://www.langchain.com/langsmith) - framework-native trajectory eval for LangChain/LangGraph users; closed platform. `commercial`.
 - [Braintrust](https://www.braintrust.dev) - eval + prompt-iteration platform; the common paid choice once teams outgrow local testing. `commercial`.
 
+**Choosing one:** Inspect AI or DeepEval for a code-first harness you wire into CI; Phoenix or Opik when you want tracing and eval together, self-hosted; promptfoo for YAML/CLI eval gates; LangSmith or Braintrust for a managed platform.
+
 ## Simulation & stress-testing
 
 *Tools that **generate** interactions, populations, or environments to pressure-test agents.*
@@ -105,6 +107,8 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Microsoft's cross-framework policy kernel intercepting tool calls/messages/delegations; covers the OWASP Agentic Top 10. Public Preview. `maintained`.
 - [AgentDojo](https://github.com/ethz-spylab/agentdojo) - fixed benchmark of prompt-injection attacks + defenses for tool-using agents. Also a [benchmark](#benchmarks). `research`.
 
+**Choosing one:** garak or PyRIT to attack your agent pre-ship (offline red-teaming); LlamaFirewall, NeMo Guardrails, or Guardrails AI for per-app runtime filtering; ContextForge or Agent Governance Toolkit for a centralized policy gateway across many agents; AgentDojo to benchmark injection robustness.
+
 ## Checkpointing & recovery
 
 *Surviving crashes, retries, and replays without corruption or double side-effects.*
@@ -117,6 +121,8 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [DBOS](https://github.com/dbos-inc/dbos-transact-py) - durable execution backed by PostgreSQL; inherently durable without explicit checkpoint instrumentation. `maintained`.
 - [Restate](https://github.com/restatedev/restate) - journal-based durability; `ctx.run` durable steps, built-in KV state, durable timers, idempotency keys, awakeables. Lighter than Temporal. `maintained`.
 - [exactly-once](https://github.com/swarmproof/exactly-once) - focused idempotency middleware so agent side-effects (payments, emails, txs) fire once. Narrower than the workflow engines above — a complementary idempotency layer, not a full durable-execution runtime. `maintained`.
+
+**Choosing one:** Temporal for battle-tested scale; DBOS if you already run PostgreSQL; Restate for a light journal-based runtime; Inngest for event-driven serverless flow control; LangGraph for checkpointing native to the agent graph; Cloudflare Agents or Vercel Workflow if you're already on those platforms; exactly-once as a narrow idempotency layer alongside any of them.
 
 ## Cost & economics
 
