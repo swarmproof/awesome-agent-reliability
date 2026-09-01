@@ -25,14 +25,17 @@ jobs:
         with:
           node-version: 22
 
+      # Install the locked dev deps so CI runs the SAME awesome-lint version as
+      # `npm run lint` locally. (Previously CI used `npx --yes awesome-lint`,
+      # which pulled the latest and silently diverged from the pinned local one.)
+      - name: install
+        run: npm ci
+
       - name: format lint self-test (fixtures)
         run: node scripts/format-lint.mjs --self-test
 
-      - name: format lint (entry grammar, tags, TOC sync)
-        run: node scripts/format-lint.mjs README.md
-
-      - name: awesome-lint
-        run: npx --yes awesome-lint README.md
+      - name: lint (format lint + awesome-lint)
+        run: npm run lint
 
       - name: dead-link check (README + docs)
         uses: lycheeverse/lychee-action@v2

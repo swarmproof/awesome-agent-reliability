@@ -11,7 +11,7 @@
     "test": "node scripts/format-lint.mjs --self-test"
   },
   "devDependencies": {
-    "awesome-lint": "^1.2.0"
+    "awesome-lint": "^2.3.0"
   },
   "license": "Apache-2.0",
   "repository": {
