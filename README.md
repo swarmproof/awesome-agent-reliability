@@ -70,6 +70,7 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [promptfoo](https://github.com/promptfoo/promptfoo) - YAML/CLI eval + red-team gate teams wire into CI; the common PR-time eval harness. Also in [Security](#security). `maintained`.
 - [agentevals](https://github.com/langchain-ai/agentevals) - open evaluators for agent trajectories; trajectory match (strict/unordered/subset/superset) + LLM-as-judge. LangGraph-ecosystem helper. `maintained`.
 - [LangWatch](https://github.com/langwatch/langwatch) - OSS-core eval + monitoring with UI-driven eval building for non-engineers (commercial cloud tier). `maintained`.
+- [YYLO Benchmark](https://github.com/yylo-dev/yylo-benchmark) - isolated evaluation layer for agent runs: fresh-repository workspaces, deterministic and/or LLM profiles, immutable evidence. Young (Aug 2026). `maintained`.
 - [LangSmith](https://www.langchain.com/langsmith) - framework-native trajectory eval for LangChain/LangGraph users; closed platform. `commercial`.
 - [Braintrust](https://www.braintrust.dev) - eval + prompt-iteration platform; the common paid choice once teams outgrow local testing. `commercial`.
 
