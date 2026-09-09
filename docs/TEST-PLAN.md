@@ -1,6 +1,6 @@
 # TEST PLAN — Quality & Validation Strategy
 
-> For a curation project, "tests" = **format lint, dead-link checking, awesome-lint conformance, and curation-policy validation**. "E2E testing" = the automated CI that runs on every PR + a scheduled monthly sweep. This document defines what "healthy" means and the concrete Given/When/Then scenarios that enforce it.
+> For a curation project, "tests" = **format lint, dead-link checking, awesome-lint conformance, and curation-policy validation**. "E2E testing" = the automated CI that runs on every PR + a scheduled weekly sweep. This document defines what "healthy" means and the concrete Given/When/Then scenarios that enforce it.
 
 ---
 
@@ -9,7 +9,7 @@
 | Dimension | What it checks | Automated? | Gate |
 |---|---|---|---|
 | **Format lint** | Entry grammar (`[name](url) — desc. \`tag\``), one tag from the closed set, TOC in sync. | Yes (custom + regex) | PR blocks |
-| **Dead-link check** | Every URL resolves (2xx/3xx, no auth wall). | Yes (link-checker) | PR blocks + monthly cron |
+| **Dead-link check** | Every URL resolves (2xx/3xx, no auth wall). | Yes (link-checker) | PR blocks + weekly cron |
 | **awesome-lint** | Structure/format conformance to the `awesome` standard (required by `sindresorhus/awesome`). | Yes (`awesome-lint`) | PR blocks |
 | **Tag correctness** | Tag matches the rubric (ARCHITECTURE §4). | Partial (lint checks *validity*; human checks *correctness*). | Human review |
 | **Curation policy** | Real, relevant, non-redundant, sourced, honestly ordered. | No (human judgment). | Human review |
@@ -27,9 +27,9 @@
 3. **Format lint** — a small script asserting the entry grammar and tag validity (regex over list lines; see §4 scenarios).
 4. **TOC sync** — assert every `## Section` has a `## Contents` anchor and vice-versa.
 
-### 2b. Scheduled — monthly cron (`schedule: cron`)
+### 2b. Scheduled — weekly cron (`schedule: cron`)
 - Full dead-link sweep over the whole repo (catches rot introduced by the outside world, not a PR).
-- Opens an issue listing any newly-dead links for the monthly refresh.
+- Opens a `link-rot` issue listing any newly-dead links, to fix on sight (a dead link is not deferred to the monthly curation pass). Weekly cadence shrinks the worst-case rot window from ~30 days to ~7 at near-zero cost; the human curation pipeline stays monthly.
 
 ### 2c. Local dev
 - A `make lint` / `npm run lint` that runs the same three checks so contributors catch failures before pushing.
@@ -86,9 +86,9 @@ The list is **healthy** when, on `main`:
 > **When** the honesty spot-audit (H6) runs at review/refresh
 > **Then** the change is **reverted** per ADR-006 (own tools ranked below stronger competitors where true) — this is a hard policy gate, not a preference.
 
-### H — Link rot caught by the monthly sweep
+### H — Link rot caught by the weekly sweep
 > **Given** a previously-live entry whose project was archived and the URL now 404s
-> **When** the scheduled monthly cron runs
+> **When** the scheduled weekly cron runs
 > **Then** an issue is auto-opened; the refresh either updates the URL, re-tags (dormant), or CUTs the entry — restoring H1.
 
 ### I — Meta-list submission readiness
