@@ -121,6 +121,7 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [DBOS](https://github.com/dbos-inc/dbos-transact-py) - durable execution backed by PostgreSQL; inherently durable without explicit checkpoint instrumentation. `maintained`.
 - [Restate](https://github.com/restatedev/restate) - journal-based durability; `ctx.run` durable steps, built-in KV state, durable timers, idempotency keys, awakeables. Lighter than Temporal. `maintained`.
 - [exactly-once](https://github.com/swarmproof/exactly-once) - focused idempotency middleware so agent side-effects (payments, emails, txs) fire once. Narrower than the workflow engines above — a complementary idempotency layer, not a full durable-execution runtime. `maintained`.
+- [Browser Agent Blueprint](https://github.com/LydiaTools/browser-agent-blueprint) - MIT prompts and Playwright demos test verified writes and cross-process resume; the local runner has a dispatch-to-checkpoint crash gap. `maintained`.
 
 **Choosing one:** Temporal for battle-tested scale; DBOS if you already run PostgreSQL; Restate for a light journal-based runtime; Inngest for event-driven serverless flow control; LangGraph for checkpointing native to the agent graph; Cloudflare Agents or Vercel Workflow if you're already on those platforms; exactly-once as a narrow idempotency layer alongside any of them.
 
