@@ -85,9 +85,7 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [Strands Evals](https://github.com/strands-agents/evals) - agent eval SDK with adaptive simulated users (ActorSimulator) + deterministic fault injection (ChaosPlugin: timeouts, corruption). Early. `maintained`.
 - [stampede](https://github.com/swarmproof/stampede) - generates realistic + adversarial agent *populations* against your MCP server / API / protocol (tests agents→system, vs τ-bench's users→agent). Earlier-stage than τ-bench; complementary. `maintained`.
 - [mockworld](https://github.com/swarmproof/mockworld) - high-fidelity fake services (Stripe/Gmail/exchange) as instant MCP servers for safe agent testing. `maintained`.
-- 
 - [Agent Retry Rodeo](https://github.com/RishabhPande/agent-retry-rodeo) - offline scripted test range for retry failures (duplicate writes, partial completion, stale versions); synthetic, checks final state. `maintained`.
-
 
 ## Security
 
