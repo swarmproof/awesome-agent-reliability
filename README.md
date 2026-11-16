@@ -156,6 +156,7 @@ Debugging a specific failure? Jump to the sections and tools that address it —
 - [WebArena](https://github.com/web-arena-x/webarena) - multi-step browser tasks in realistic web environments. `research`.
 - [ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) - EMNLP 2026; 152 everyday tasks on live websites, graded by final-request interception; public leaderboard + traces. `maintained`.
 - [OSWorld](https://github.com/xlang-ai/OSWorld) - computer-use on a real desktop; hard and un-saturated. `research`.
+- [AgentLeak](https://github.com/Privatris/AgentLeak) - benchmarks multi-agent privacy leakage in outputs and internal channels; empirical coverage varies by channel. `research`.
 
 ## Incidents & post-mortems
 
